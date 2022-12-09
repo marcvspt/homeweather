@@ -3,25 +3,25 @@ HomeWeather is a SmarthHouse system. In the webapp we can upload data from five 
 
 ## Download and Deploy
 ```bash
-git clone https://github.com/atriox2510/homeweather
+git clone https://github.com/marcopat01/homeweather
 cd homeweather
 docker-compose up -d
 ```
 
 ## Configuration
 ### Set database credentials
-You should change the the database user and password in the [**Docker Compose file**](docker-compose.yml), these need to be the same as the [**config.php file**](html/config/config.php). The **root** password doesn't must to be the same like the normal user.
+You should change the the database user and password in the [**Docker Compose file**](docker-compose.yml), these need to be the same as the [**config.php file**](web/html/config/config.php). The **root** password doesn't must to be the same like the normal user.
 
 ### Create the tables
 We can create them in the phpMyAdmin service running in **localhost:8080** importing the [**MySQL file**](homeweather.sql) in the **homeweather** database.
 
 ### Domain and IP
 If you want to access at the service with a domain or IP you must change the **"localhost"** with your IP or domain in these files:
-* [**htaccess ErrorDocument**](html/.htaccess)
-* [**Admin Chars url**](html/admin/chars.php)
-* [**User Chars url**](html/user/chars.php)
-* [**Admin API url**](html/admin/configuracion.php)
-* [**User API url**](html/user/configuracion.php)
+* [**htaccess ErrorDocument**](web/html/.htaccess)
+* [**Admin Chars url**](web/html/admin/chars.php)
+* [**User Chars url**](web/html/user/chars.php)
+* [**Admin API url**](web/html/admin/configuracion.php)
+* [**User API url**](web/html/user/configuracion.php)
 
 If you are going to use SSL/TLS you must change the **"http"** for **"https"** as well.
 
