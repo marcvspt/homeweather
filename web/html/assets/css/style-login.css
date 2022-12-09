@@ -1,0 +1,220 @@
+/* Aggregation of fonts */
+
+@font-face {
+	font-family: "Roboto Bold";
+ 	src: url("assets/typography/Roboto-Bold.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto Light";
+ 	src: url("assets/typography/Roboto-Light.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto Black";
+ 	src: url("assets/typography/Roboto-Black.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto Regular";
+ 	src: url("assets/typography/Roboto-Regular.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins Bold";
+ 	src: url("assets/typography/Poppins-Bold.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins Regular";
+ 	src: url("assets/typography/Poppins-Regular.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins Light";
+ 	src: url("assets/typography/Poppins-Light.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins Medium";
+ 	src: url("assets/typography/Poppins-Medium.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+@font-face {
+	font-family: "Poppins SemiBold";
+ 	src: url("assets/typography/Poppins-SemiBold.ttf");
+	font-weight: 100;
+ 	font-style: normal;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number], input[type=email] {
+  width: 95%;
+  padding: 10px 18px;
+  margin: 8px 10px;
+  display: inline-block;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+}
+
+.text-register{
+  font-family: "Roboto Regular";
+  text-align: center;
+  display: inline-block;
+  margin: 5px;
+  color: #222222;
+}
+
+/* Set a style for all buttons */
+.button-r{
+  background-color: #0D87BD;
+  color: white;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button-is{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #EA1111;
+}
+
+button{
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 15%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.psw a{
+  color: #222222;
+  font-family: Poppins Light;
+}
+
+/* .mc1::-webkit-scrollbar{
+  width: 7px;
+}
+
+.mc1::-webkit-scrollbar-thumb{
+  background-color: #0D87BD;
+  border-radius: 10px;
+} */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #F5F7FA;
+  margin: 5% auto 4% auto; /* 5% from the top, 4% from the bottom and centered */
+  border: 1px solid #D9D9D9;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

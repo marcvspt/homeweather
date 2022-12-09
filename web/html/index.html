@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>HomeWeather</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link href="assets/images/logo.png" rel="icon">
+  <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/lib/animate/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style-login.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container">
+      <div class="logo float-left">
+        <a href="#intro" class="scrollto"><img src="assets/images/logo-grande.png" class="img-fluid"></a>
+      </div>
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Inicio</a></li>
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <!--==========================
+            LOGIN FORM
+          ============================-->
+          <li onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><a href="#">Inicio de
+              Sesi&oacute;n</a></li>
+          <div id="id01" class="modal">
+            <form id="login-m" class="modal-content animate" action="" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+                <img src="assets/images/img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
+              <div class="container">
+                <label for="InputName"><b>Correo</b></label>
+                <input type="email" placeholder="Correo" name="email" id="email" required>
+                <label for="Password"><b>Password</b></label>
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" id="password" required>
+                <div id="button-is">
+                  <button id="button-login" class="button-r" type="submit">Iniciar sesi&oacute;n</button>
+                </div>
+              </div>
+              <div class="container">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                  class="cancelbtn">Cancelar</button>
+              </div>
+            </form>
+          </div>
+          <!--==========================
+            LOGIN FORM
+          ============================-->
+          <!--==========================
+            REGISTRO FORM
+          ============================-->
+          <li onclick="document.getElementById('id02').style.display='block'" style="width:auto;"><a
+              href="#">Registro</a></li>
+          <div id="id02" class="modal">
+            <form id="registro-m" class="modal-content animate" action="" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+              </div>
+              <div class="text-register">
+                <h4>Registrate</h4>
+              </div>
+              <div class="container">
+                <label for="InputName"><b>Nombre</b></label>
+                <input type="text" placeholder="Nombre" name="name" id="name" required>
+                <label for="InputLastName"><b>Apellido</b></label>
+                <input type="text" placeholder="Apellido" name="lastname" id="lastname" required>
+                <label for="InputEmail1"><b>Correo Electr&oacute;nico</b></label>
+                <input type="email" placeholder="Correo Electr&oacute;nico" aria-describedby="emailHelp" name="email"
+                  id="email" required>
+                <label for="InputNumber"><b>Tel&eacute;ono</b></label>
+                <input type="number" placeholder="Tel&eacute;fono" name="telefono" id="telefono" required>
+                <label for="Password"><b>Contrase&ntilde;a</b></label>
+                <input type="password" placeholder="Contrase&ntilde;a" name="password" id="password" required>
+                <label for="Password"><b>Repetir Contrase&ntilde;a</b></label>
+                <input type="password" placeholder="Repetir Contrase&ntilde;a" name="repassword" id="repassword"
+                  required>
+                <button class="button-r" type="submit">Registrarse</button>
+              </div>
+              <div class="container">
+                <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                  class="cancelbtn">Cancelar</button>
+              </div>
+            </form>
+          </div>
+          <!--==========================
+            REGISTRO FORM
+          ============================-->
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro" class="clearfix">
+    <div class="container">
+      <div class="intro-info">
+        <h1>404 Solutions Inc</h1>
+        <h2>Desarrollamos <span class="typed"></span></h2>
+        <h3>Soluciones inform&aacute;ticas para micros, peque&ntilde;as y <br> medianas empresas.</h3>
+      </div>
+    </div>
+    <footer class="wave">
+      <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+          <path d="M-0.93,50.99 C60.93,233.00 251.56,99.99 505.31,0.00 L500.00,150.00 L0.00,150.00 Z"
+            style="stroke: none; fill: #F5F7FA">
+          </path>
+        </svg>
+      </div>
+    </footer>
+  </section>
+  <!--==========================
+      About Us Section
+    ============================-->
+  <section id="about">
+    <div class="container">
+      <div class="about-extra">
+        <div class="img-about">
+          <img class="img-about-1" src="assets/images/Pink.jpg">
+          <img class="img-about-2" src="assets/images/Girl.jpg">
+          <img class="img-about-3" src="assets/images/Teamwork.jpg">
+        </div>
+        <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0 container-about">
+          <h4>¿Qui&eacute;nes somos?</h4>
+          <p>404 Solutions Inc es una empresa enfocada en apoyar a las micro, peque&ntilde;as y medianas empresas
+            a consolidarse en el mercado ofreciendo soluciones inform&aacute;ticas para establecer una
+            comunicaci&oacute;n efectiva entre estas, sus clientes y proveedores y agilizar sus procesos productivo.
+            <br><br>
+            Buscamos generar oportunidades para cada uno de nuestros clientes y que estos puedan incrementar sus ventas,
+            reducir sus costos y darse a conocer en nuevos mercados.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #about -->
+  <!--==========================
+      Services Section
+  ============================-->
+  <section id="services">
+    <div class="container-services">
+      <div class="container">
+        <header class="section-header">
+          <h3>Nuestros servicios</h3>
+          <div class="svg-services">
+            <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+              class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+              <path fill="#F9CF00"
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
+              <path fill="FFFFFF"
+                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+            </svg>
+          </div>
+        </header>
+      </div>
+    </div>
+  </section>
+  <section id="services" class="section-bg">
+    <div class="row">
+      <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-duration="1.4s">
+        <div class="box">
+          <a href="#">
+            <div class="icon"><i class="bi bi-file-bar-graph"></i></div>
+          </a>
+          <h4 class="title">Marketing Digital</h4>
+          <p class="description">Gestionamos cada una de sus redes sociales creando una comunidad alrededor de su
+            producto o servicio.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-duration="1.4s">
+        <div class="box">
+          <a href="#">
+            <div class="icon"><i class="bi bi-laptop"></i></div>
+          </a>
+          <h4 class="title">Sitios Web</h4>
+          <p class="description">Dise&ntilde;o y desarrollo de sitios web, tiendas en l&iacute;nea, plataformas
+            e-learning, as&iacute; como el posicionamiento de la misma.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 offset-lg-1 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+        <div class="box">
+          <a href="#">
+            <div class="icon"><i class="bi bi-gear"></i></div>
+          </a>
+          <h4 class="title">Software a la Medida</h4>
+          <p class="description">Desarrollamos el software adecuado a las necesidades de su empresa.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+        <div class="box">
+          <a href="#">
+            <div class="icon"><i class="bi bi-phone"></i></div>
+          </a>
+          <h4 class="title">Aplicaciones M&oacute;viles</h4>
+          <p class="description">Desarrollo de aplicaciones nativas para Android, iOS y Windows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #services -->
+  <!-- ==========================
+    Contact Section
+  ============================-->
+  <section id="contact">
+    <div class="container-contact-1">
+      <div class="container">
+        <header class="section-header">
+          <h1>Ponte en contacto con nosotros</h1>
+          <p>Si gustas contactar con nosotros yendo a nuestras oficinas o cont&aacute;ctanos por cualquiera de los medios
+            que se abajo a la derecha. Te responderemos lo m&aacute;s pronto posible.</p>
+        </header>
+      </div>
+    </div>
+  </section>
+  <!--==========================
+    Footer Section
+  ============================-->
+  <footer id="footer">
+    <div class="container-footer-all">
+      <div class="container-body">
+        <div class="column1">
+          <a href="index.html"><img src="assets/images/logo-grande.png"></a>
+          <p>404 Solutions Inc es una empresa dedicada al desarrollo de soluciones tecnol&oacute;gicas para
+            micro, peque&ntilde;as y medianas empresas de la Pen&iacute;nsula de Yucat&aacute;n.</p>
+        </div>
+        <div class="column2">
+          <h1>Contacto</h1>
+          <div class="row-fila">
+            <img src="assets/svg/room_white_24dp.svg">
+            <label>Calle 67 entre 16 y 22 Núm. 80 Fidel Velázquez, Mérida, Yucatán. <br>C.P. 97166</label>
+          </div>
+          <div class="row-fila">
+            <img src="assets/svg/phone_white_24dp.svg">
+            <label>999 528 9559</label>
+          </div>
+          <div class="row-fila">
+            <a href="mailto:soporte.homeweather@gmail.com"><img src="assets/svg/email_white_24dp.svg">
+              <label>soporte.homeweather@gmail.com</label></a>
+          </div>
+        </div>
+        <div class="column3">
+          <h1>Pol&iacute;ticas</h1>
+          <div class="fila-row">
+            <label><a href="terms-and-conditions.html">T&eacute;rminos y condiciones</a></label>
+          </div>
+          <div class="fila-row">
+            <label><a href="privacy-policies.html">Pol&iacute;ticas de privacidad</a></label>
+          </div>
+          <div class="fila-row">
+            <label><a href="cookies.html">Cookies</a></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-footer">
+      <div class="copyright">
+        <label>Todos los derechos reservados © 404 Solutions Inc 2022</label>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript Libraries -->
+  <script src="assets/lib/jquery/jquery.min.js"></script>
+  <script src="assets/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/lib/mobile-nav/mobile-nav.js"></script>
+  <script src="assets/lib/wow/wow.min.js"></script>
+  <!-- Template Main Javascript File -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/validacion.js"></script>
+  <script src="assets/js/jquery-3.1.1.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+version: '3.7'
+
+services:
+    web:
+        container_name: web
+        hostname: web
+        build:
+            context: ./web
+            dockerfile: Dockerfile
+        restart: always
+        volumes:
+            - ./web/html:/var/www/html
+        links:
+            - db:db
+        ports:
+            - 80:80
+        networks:
+            - db-network
+            - web-network
+
+    db:
+        container_name: db
+        hostname: db
+        image: mariadb:latest
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 'R00tP4ssw0rd' #Config your own root password.
+            MYSQL_USER: 'hw_user' #Config your own user. This needs to be the same like html/config/config.php $user.
+            MYSQL_PASSWORD: 'hw_password' #Config your own password. This needs to be the same like html/config/config.php $pass.
+            MYSQL_DATABASE: 'homeweather'
+        volumes:
+            - db-data:/var/lib/mysql
+        ports:
+            - 127.0.0.1:3306:3306
+        networks:
+            - db-network
+
+    pma:
+        container_name: pma
+        hostname: pma
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        links:
+            - db:db
+        ports:
+            - 8080:80
+        networks:
+            - db-network
+            - web-network
+
+volumes:
+    db-data:
+        name: homeweather-db-data
+
+networks:
+    web-network:
+        external: true
+        name: homeweather-web-network
+
+    db-network:
+        external: false
+        name: homeweather-db-network

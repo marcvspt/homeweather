@@ -1,0 +1,2 @@
+ErrorDocument 404 http://localhost/error/404.html
+ErrorDocument 500 http://localhost/error/500.html
