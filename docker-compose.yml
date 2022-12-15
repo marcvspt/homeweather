@@ -30,8 +30,6 @@ services:
             MYSQL_DATABASE: 'homeweather'
         volumes:
             - db-data:/var/lib/mysql
-        ports:
-            - 127.0.0.1:3306:3306
         networks:
             - db-network
 
@@ -54,9 +52,7 @@ volumes:
 
 networks:
     web-network:
-        external: true
         name: homeweather-web-network
 
     db-network:
-        external: false
         name: homeweather-db-network
