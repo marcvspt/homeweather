@@ -21,7 +21,7 @@ services:
     db:
         container_name: db
         hostname: db
-        image: mariadb:10.9.4
+        image: mariadb:latest
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: 'R00tP4ssw0rd' #Config your own root password.
