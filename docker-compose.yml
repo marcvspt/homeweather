@@ -53,8 +53,8 @@ volumes:
 networks:
     web-network:
         name: homeweather-web-network
-            driver: bridge
+        driver: bridge
             
     db-network:
         name: homeweather-db-network
-            driver: bridge
+        driver: bridge
