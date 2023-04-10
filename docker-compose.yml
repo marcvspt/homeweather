@@ -8,10 +8,10 @@ services:
             context: ./web
             dockerfile: Dockerfile
         restart: always
+        depends_on:
+            - db
         volumes:
             - ./web/html:/var/www/html
-        links:
-            - db:db
         ports:
             - 80:80
         networks:
@@ -21,13 +21,13 @@ services:
     db:
         container_name: db
         hostname: db
-        image: mariadb:latest
+        image: mariadb:10.7.8
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: 'R00tP4ssw0rd' #Config your own root password.
-            MYSQL_USER: 'hw_user' #Config your own user. This needs to be the same like html/config/config.php $user.
-            MYSQL_PASSWORD: 'hw_password' #Config your own password. This needs to be the same like html/config/config.php $pass.
-            MYSQL_DATABASE: 'homeweather'
+            MYSQL_ROOT_PASSWORD: R00tP4ssw0rd #Config your own root password.
+            MYSQL_USER: hw_user #Config your own user. This needs to be the same like html/config/config.php $user.
+            MYSQL_PASSWORD: hw_password #Config your own password. This needs to be the same like html/config/config.php $pass.
+            MYSQL_DATABASE: homeweather
         volumes:
             - db-data:/var/lib/mysql
         networks:
@@ -36,10 +36,10 @@ services:
     pma:
         container_name: pma
         hostname: pma
-        image: phpmyadmin/phpmyadmin
+        image: phpmyadmin:5.2.1
         restart: always
-        links:
-            - db:db
+        depends_on:
+            - db
         ports:
             - 8080:80
         networks:
@@ -53,6 +53,8 @@ volumes:
 networks:
     web-network:
         name: homeweather-web-network
-
+            driver: bridge
+            
     db-network:
         name: homeweather-db-network
+            driver: bridge
