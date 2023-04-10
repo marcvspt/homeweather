@@ -54,7 +54,7 @@ networks:
     web-network:
         name: homeweather-web-network
         driver: bridge
-            
+
     db-network:
         name: homeweather-db-network
         driver: bridge
