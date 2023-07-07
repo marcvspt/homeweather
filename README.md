@@ -3,7 +3,7 @@ HomeWeather is a SmarthHouse system. In the webapp we can upload data from five 
 
 ## Download and Deploy
 ```bash
-git clone https://github.com/atriox2510/homeweather
+git clone https://github.com/marcvspt/homeweather
 cd homeweather
 docker-compose up -d
 ```
