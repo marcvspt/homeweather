@@ -21,7 +21,7 @@ services:
     db:
         container_name: db
         hostname: db
-        image: mariadb:10.7.8
+        image: mariadb:lts
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: R00tP4ssw0rd #Config your own root password.
@@ -36,7 +36,7 @@ services:
     pma:
         container_name: pma
         hostname: pma
-        image: phpmyadmin:5.2.1
+        image: phpmyadmin:5.2.1-fpm-alpine
         restart: always
         depends_on:
             - db
